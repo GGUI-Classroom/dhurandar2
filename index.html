@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>TMDB ID 1582770</title>
+  <title>Protected Embed</title>
   <style>
     body {
       margin: 0;
@@ -49,19 +49,6 @@
       height: 100%;
       border: none;
     }
-
-    .tmdb-id {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 10px;
-      background: #111;
-      font-size: 18px;
-      text-align: center;
-      display: none;
-      z-index: 10;
-    }
   </style>
 </head>
 <body>
@@ -71,10 +58,6 @@
     <input type="password" id="password-input" placeholder="Password">
     <button onclick="checkPassword()">Submit</button>
     <div id="error">Incorrect password</div>
-  </div>
-
-  <div class="tmdb-id" id="tmdb-id">
-    TMDB ID: <strong>1582770</strong>
   </div>
 
   <div id="video-container">
@@ -87,7 +70,6 @@
 
       if (input === "OTP10293") {
         document.getElementById("password-box").style.display = "none";
-        document.getElementById("tmdb-id").style.display = "block";
         document.getElementById("video-container").style.display = "block";
 
         // Load embed only after password is correct
