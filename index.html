@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TMDB ID 1582770</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    #password-box input {
+      padding: 10px;
+      font-size: 18px;
+      width: 250px;
+      text-align: center;
+    }
+
+    #password-box button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    #error {
+      color: red;
+      margin-top: 10px;
+      display: none;
+    }
+
+    #video-container {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      inset: 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .tmdb-id {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background: #111;
+      font-size: 18px;
+      text-align: center;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="password-box">
+    <h2>Enter Password</h2>
+    <input type="password" id="password-input" placeholder="Password">
+    <button onclick="checkPassword()">Submit</button>
+    <div id="error">Incorrect password</div>
+  </div>
+
+  <div class="tmdb-id" id="tmdb-id">
+    TMDB ID: <strong>1582770</strong>
+  </div>
+
+  <div id="video-container">
+    <iframe
+      id="video-frame"
+      allowfullscreen
+      allow="encrypted-media"
+    ></iframe>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("password-input").value;
+
+      if (input === "OTP10293") {
+        document.getElementById("password-box").style.display = "none";
+        document.getElementById("tmdb-id").style.display = "block";
+        document.getElementById("video-container").style.display = "block";
+
+        // Load the embed ONLY after password is correct
+        document.getElementById("video-frame").src =
+          "https://vidfast.pro/movie/533535";
+      } else {
+        document.getElementById("error").style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
