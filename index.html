@@ -79,6 +79,7 @@
   <div id="video-container">
     <iframe
       id="video-frame"
+      sandbox="allow-same-origin allow-scripts allow-forms"
       allowfullscreen
       allow="encrypted-media"
     ></iframe>
@@ -95,7 +96,7 @@
 
         // Load the embed ONLY after password is correct
         document.getElementById("video-frame").src =
-          "https://vidfast.pro/movie/533535";
+          "https://vidfast.pro/movie/1582770";
       } else {
         document.getElementById("error").style.display = "block";
       }
